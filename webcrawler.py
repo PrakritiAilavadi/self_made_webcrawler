@@ -30,5 +30,35 @@ def get_single_item_data(url):
         all_links = "http:" + item_name.get('src')        
         print(all_links)
         down_web(all_links)
-        
 trade_spider()
+        
+
+
+
+
+
+#Downloading images from Unsplash
+import requests
+from bs4 import BeautifulSoup
+import urllib.request
+import random
+
+def down_web(url):
+    name = random.randrange(1,1000000)
+    full_name = str(name) + ".jpg" 
+    urllib.request.urlretrieve(url, full_name)
+
+#https://source.unsplash.com/collection/{COLLECTION ID}
+#for i in range(50):
+#    down_web("https://source.unsplash.com/collection/524823")
+#    down_web("https://source.unsplash.com/collection/488437")
+    
+for i in range(100):
+    down_web("https://source.unsplash.com/collection/1044444")
+
+
+
+
+
+
+
